@@ -1,0 +1,11 @@
+<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Botón</title>
+</head>
+<body>
+    <button onclick="alert('Hola')">Bienvenido esta página está asegurada por TWICE</button>
+</body>
+</html>

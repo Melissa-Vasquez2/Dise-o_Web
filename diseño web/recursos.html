@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Educativos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d0f0c0; /* Color de fondo verde pastel */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .resource {
+            background-color: #d9ffea;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .resource h2 {
+            margin-top: 0;
+        }
+        .resource p {
+            margin: 5px 0;
+        }
+        /* Button styles */
+        .button {
+            background-color: #aaf26a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .button:hover {
+            background-color: #96c0b1;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal h2 {
+            margin-top: 0;
+        }
+        .modal iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+        }
+    </style>
+
+    <script>
+        function showModal(event, title, content, url) {
+            event.preventDefault();
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-content').innerText = content;
+            
+            // Check if the URL is a YouTube video
+            if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                document.getElementById('modal-video').src = url;
+                document.getElementById('modal-video').style.display = 'block';
+                document.getElementById('modal-link').style.display = 'none';
+            } else {
+                document.getElementById('modal-link').href = url;
+                document.getElementById('modal-link').style.display = 'inline';
+                document.getElementById('modal-video').style.display = 'none';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('modal-video').src = ''; // Stop the video
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal')) {
+                closeModal();
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="Ansiedad.html"><button class="button">Página Principal</button></a>
+    <div class="container">
+        <h1>Recursos Educativos</h1>
+        <input type="text" id="filter" onkeyup="filterResources()" placeholder="Filtrar recursos...">
+        <div class="resource">
+            <h2>Artículo: Entendiendo la Ansiedad</h2>
+            <p>Un artículo detallado sobre las causas y efectos de la ansiedad en niños.</p>
+            <a href="https://www.therapyside.com/post-es/tag-testimonio-personal-sobre-el-trastorno-de-ansiedad-generalizada#:~:text=La%20presi%C3%B3n%20en%20el%20pecho,era%20imposible%20salir%20de%20ah%C3%AD." onclick="showModal(event, 'Entendiendo la Ansiedad', 'Un artículo detallado sobre las causas y efectos de la ansiedad en niños.', 'https://www.therapyside.com/post-es/tag-testimonio-personal-sobre-el-trastorno-de-ansiedad-generalizada#:~:text=La%20presi%C3%B3n%20en%20el%20pecho,era%20imposible%20salir%20de%20ah%C3%AD.')">Leer más</a>
+        </div>
+        <div class="resource">
+            <h2>Video: Relájate</h2>
+            <p>Tu mente y cuerpo necesitan un descanso de vez en cuando, tómate un break para descansar de todo lo que te hace daño.</p>
+            <a href="https://www.youtube.com/embed/fBpDdDZNvl0" onclick="showModal(event, 'Relájate', 'A veces necesitamos escuchar música y disfrutar del momento sin olvidar nuestro tiempo de respiración, ve la letra y mantente relajada.', 'https://www.youtube.com/embed/fBpDdDZNvl0')">Ver video</a>
+        </div>
+        <!-- Más recursos aquí -->
+    </div>
+
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Título del Recurso</h2>
+            <p id="modal-content">Contenido del recurso...</p>
+            <a id="modal-link" href="#" target="_blank">Continuar al recurso</a>
+            <iframe id="modal-video" src="" style="display: none;"></iframe>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje a la Isla de la Tranquilidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d0f0c0; /* Color de fondo verde pastel */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0066cc;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #0066cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004999;
+        }
+    </style>
+</head>
+<body>
+    <a href="juegos.html"><button class="button">Volver</button></a>
+    <div class="container">
+        <h1>Viaje a la Isla de la Tranquilidad</h1>
+        <p id="story">Haz clic en el botón para comenzar el viaje de visualización.</p>
+        <button onclick="startVisualization()">Comenzar</button>
+    </div>
+
+    <script>
+        function startVisualization() {
+            const story = document.getElementById('story');
+            story.innerHTML = `
+                <p>Imagina que estás en una playa hermosa. El sol está brillando, y puedes sentir el calor en tu piel. La arena es suave y cálida bajo tus pies. Puedes escuchar el sonido de las olas del mar que vienen y van, una y otra vez.</p>
+                <p>Ahora, mira hacia el horizonte y ves una pequeña isla mágica llamada la Isla de la Tranquilidad. Esta isla es un lugar especial donde siempre te sientes seguro y feliz. Para llegar a la isla, necesitas subirte a un barco muy bonito que está esperándote en la orilla.</p>
+                <p>Sube al barco y siéntate cómodamente. El barco comienza a moverse suavemente sobre el agua. Sientes el viento en tu cara y escuchas las gaviotas volando por encima. Te sientes muy tranquilo y relajado.</p>
+                <p>Después de un rato, el barco llega a la Isla de la Tranquilidad. Bajas del barco y comienzas a explorar la isla. Ves flores de colores brillantes y mariposas volando a tu alrededor. Hay un sendero que te lleva a un bosque mágico lleno de árboles altos y verdes.</p>
+                <p>Encuentras un lugar especial en el bosque, un pequeño claro con una manta suave extendida en el suelo. Te sientas en la manta y sientes una brisa suave y agradable. Cierras los ojos y escuchas los sonidos de la naturaleza. Todo es muy pacífico aquí.</p>
+                <p>Puedes quedarte en este lugar todo el tiempo que quieras. Cuando estés listo para regresar, simplemente vuelve al barco. El barco te llevará de vuelta a la playa. Respira profundamente y abre los ojos cuando estés listo.</p>
+            `;
+        }
+    </script>
+</body>
+</html>

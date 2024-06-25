@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Caja de los Miedos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d0f0c0; /* Color de fondo verde pastel */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #64b5f6; /* Título azul pastel */
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .activity {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .activity textarea {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #64b5f6;
+        }
+        .activity select {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #64b5f6;
+        }
+        .activity button {
+            background-color: #64b5f6; /* Botón azul pastel */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .activity button:hover {
+            background-color: #42a5f5; /* Botón azul pastel más oscuro */
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <a href="juegos.html"><button class="button">Volver</button></a>
+    <div class="container">
+        <h1>La Caja de los Miedos</h1>
+        <p>Prepara una caja y pequeños papeles. Pide a los niños que escriban o dibujen sus miedos y los coloquen en la caja. Luego, abre la caja juntos y hablen sobre cada miedo, buscando formas de afrontarlos.</p>
+        
+        <div class="activity">
+            <textarea id="fear" placeholder="Escribe tu miedo aquí..."></textarea>
+            <select id="reason">
+                <option value="">¿Por qué sientes este miedo?</option>
+                <option value="Experiencia pasada">Experiencia pasada</option>
+                <option value="Desconocido">Miedo a lo desconocido</option>
+                <option value="Opinión de otros">Preocupación por la opinión de otros</option>
+                <option value="Falta de control">Falta de control sobre la situación</option>
+                <option value="Imaginación">Algo que imaginaste</option>
+            </select>
+            <button onclick="showResult()">Enviar</button>
+        </div>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function showResult() {
+            const fear = document.getElementById('fear').value;
+            const reason = document.getElementById('reason').value;
+            let message = '';
+
+            if (fear && reason) {
+                message = `Has escrito que tienes miedo a "${fear}" porque "${reason}". Recuerda que entender tu miedo es el primer paso para superarlo. ¡Eres muy valiente!`;
+            } else {
+                message = 'Por favor, escribe tu miedo y selecciona la razón por la cual sientes ese miedo.';
+            }
+
+            document.getElementById('result').innerText = message;
+        }
+    </script>
+    
+</body>
+</html>

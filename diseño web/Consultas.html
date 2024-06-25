@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas sobre Ansiedad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d0f0c0; /* Color de fondo verde pastel */
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #d0d0d0; /* Título azul pastel */
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label, input, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d0d0d0; /* Borde azul pastel */
+            border-radius: 5px;
+        }
+        button {
+            background-color: #d0d0d0; /* Botón azul pastel */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #d0d0d0; /* Botón azul pastel más oscuro */
+        }
+    </style>
+</head>
+<body>
+    <a href="Ansiedad.html"><button class="button">Página principal</button></a>
+    <h1>Consultas sobre Ansiedad</h1>
+    
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+        
+        <label for="sintomas">Síntomas que experimentas:</label>
+        <textarea id="sintomas" name="sintomas" rows="4" required></textarea>
+        
+        <label for="situaciones">Situaciones que te provocan ansiedad:</label>
+        <textarea id="situaciones" name="situaciones" rows="4" required></textarea>
+        
+        <label for="frecuencia">¿Con qué frecuencia experimentas ansiedad?</label>
+        <input type="text" id="frecuencia" name="frecuencia" required>
+        
+        <label for="tratamiento">¿Estás recibiendo algún tratamiento para la ansiedad? Si es así, ¿cuál?</label>
+        <textarea id="tratamiento" name="tratamiento" rows="4" required></textarea>
+
+        <label for="consulta">Consulta:</label>
+        <textarea id="consulta" name="consulta" rows="4" required></textarea>
+        
+        <button type="submit">Enviar Consulta</button>
+    </form>
+</body>
+</html>

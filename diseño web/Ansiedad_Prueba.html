@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANSIEDAD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #d0f0c0; /* Color de fondo verde pastel */
+            text-align: center;
+        }
+        h1 {
+            color: #32043a;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4d6641; /* Color de fondo verde pastel */
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+        }
+        #formContainer {
+            display: none;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        input[type="text"],
+        input[type="radio"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+        #resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e6f7ff;
+            display: none; /* Ocultar inicialmente */
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="Ansiedad.html"><button class="button">Pagina principal</button></a>
+    <h1>ANSIEDAD</h1>
+    <video controls>
+        <source src="videos/ANSIEDAD.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <br>
+    <button id="comenzarBtn">Comenzar Test</button>
+
+    <div id="formContainer">
+        <h2>Cuestionario de Ansiedad</h2>
+
+        <form id="ansiedadForm">
+            <!-- Aquí se cargarán las preguntas -->
+        </form>
+
+        <!-- Botón para calcular resultado -->
+        <button type="button" id="calcularBtn">Calcular Resultado</button>
+        
+
+        <!-- Elemento para mostrar el resultado -->
+        <div id="resultado"></div>
+    </div>
+    <div class="contact-info">
+        <h2>Refuerza tu mente</h2>
+        <p>Si no te queda claro algo, puedes realizar este segundo test</p>
+        <button onclick="window.location.href='test.html'">Test De mejoramiento</button>
+    </div>
+    <!-- Script JavaScript para manejar la interacción y cargar preguntas -->
+    <script src="TestAnsiedad.js"></script>
+</body>
+</html>

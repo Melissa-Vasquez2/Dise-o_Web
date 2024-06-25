@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades para Manejar la Ansiedad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dcedc8; /* Verde pastel */
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #00796b; /* Verde oscuro */
+        }
+        h2 {
+            color: #00796b; /* Verde oscuro */
+            background-color: #b2dfdb; /* Verde más claro */
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            color: #004d40; /* Verde más oscuro */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .audio-container,
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .audio-container div,
+        .image-container div {
+            flex: 0 0 45%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        audio {
+            width: 100%;
+            outline: none;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            background-color: #00796b; /* Verde oscuro */
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+        }
+        button:hover {
+            background-color: #004d40; /* Verde más oscuro */
+        }
+    </style>
+</head>
+<body>
+    <a href="Ansiedad.html"><button class="button">Pagina principal</button></a>
+    <div class="container">
+        <h1>Actividades para Manejar la Ansiedad</h1>
+        <p>Realiza estas actividades para ver cómo te sientes y mejorar tu estado de ánimo.</p>
+
+        <h2>Audios Relajantes</h2>
+        <div class="audio-container">
+            <div>
+                <h3>Respiración Profunda</h3>
+                <audio controls>
+                    <source src="audios/Audio_Respiracion.mp3" type="audio/mp3">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div>
+                <h3>Relajación Guiada</h3>
+                <audio controls>
+                    <source src="audios/Audio_Relajacion.mp3" type="audio/mp3">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </div>
+
+        <h2>Imágenes y Pasos para Sentirse Mejor</h2>
+        <div class="image-container">
+            <div>
+                <h3>Respira y Cuenta hasta 10</h3>
+                <img src="imagenes/Respiracion.jpeg" alt="Respira y cuenta hasta 10">
+            </div>
+            <div>
+                <h3>Abraza a tu Peluche Favorito</h3>
+                <img src="imagenes/abrazo.jpeg" alt="Abraza a tu peluche favorito">
+            </div>
+            <div>
+                <h3>Dibuja tus Sentimientos</h3>
+                <img src="imagenes/dibuja.jpeg" alt="Dibuja tus sentimientos">
+            </div>
+            <div>
+                <h3>Habla con Alguien de Confianza</h3>
+                <img src="imagenes/confianza.jpeg" alt="Habla con alguien de confianza">
+            </div>
+        </div>
+        
+        <button onclick="window.location.href='Ansiedad_Prueba.html'">Realizar Cuestionario</button>
+    </div>
+</body>
+</html>

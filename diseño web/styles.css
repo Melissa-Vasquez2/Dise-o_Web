@@ -1,0 +1,39 @@
+/* Contenido de styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd; /* Fondo azul pastel */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #64b5f6; /* Título azul pastel */
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+button {
+    background-color: #64b5f6; /* Botón azul pastel */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #42a5f5; /* Botón azul pastel más oscuro */
+}
+

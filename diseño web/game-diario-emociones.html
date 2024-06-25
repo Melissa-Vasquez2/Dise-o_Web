@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario de Emociones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d0f0c0; /* Color de fondo verde pastel */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #64b5f6; /* Título azul pastel */
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .emojis {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .emoji {
+            font-size: 2rem;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+        button {
+            background-color: #64b5f6; /* Botón azul pastel */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #42a5f5; /* Botón azul pastel más oscuro */
+        }
+    </style>
+</head>
+<body>
+    <a href="juegos.html"><button class="button">Volver</button></a>
+    <div class="container">
+        <h1>Diario de Emociones</h1>
+        <p>Proporciona un cuaderno y pide a los niños que dibujen o escriban sobre sus emociones cada día. Revisa el diario con ellos regularmente para hablar sobre sus sentimientos y cualquier preocupación que pueda surgir.</p>
+        
+        <div class="emojis">
+            <span class="emoji" onclick="showDescription('😃')">😃</span>
+            <span class="emoji" onclick="showDescription('😢')">😢</span>
+            <span class="emoji" onclick="showDescription('😡')">😡</span>
+            <span class="emoji" onclick="showDescription('😱')">😱</span>
+            <span class="emoji" onclick="showDescription('😴')">😴</span>
+        </div>
+        
+        <div class="description" id="description"></div>
+    </div>
+
+    <script>
+        function showDescription(emoji) {
+            let description = '';
+            switch(emoji) {
+                case '😃':
+                    description = 'Este emoji refleja felicidad. Se usa cuando te sientes contento y alegre.';
+                    break;
+                case '😢':
+                    description = 'Este emoji refleja tristeza. Se usa cuando te sientes triste o lloroso.';
+                    break;
+                case '😡':
+                    description = 'Este emoji refleja enojo. Se usa cuando te sientes enfadado o frustrado.';
+                    break;
+                case '😱':
+                    description = 'Este emoji refleja miedo. Se usa cuando te sientes asustado o sorprendido.';
+                    break;
+                case '😴':
+                    description = 'Este emoji refleja cansancio. Se usa cuando te sientes agotado o con sueño.';
+                    break;
+                default:
+                    description = 'Selecciona un emoji para ver su significado.';
+            }
+            document.getElementById('description').innerText = description;
+        }
+    </script>
+</body>
+</html>
